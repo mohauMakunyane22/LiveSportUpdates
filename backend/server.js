@@ -11,10 +11,10 @@ const PORT = process.env.PORT || 8080;
 // Example API route - must come before static files
 app.get("/api/hello", (req, res) => {
   res.json({ 
-    msg: "Hello from LiveSportUpdates backend - Deploy Test!", 
+    msg: "Hello from LiveSportUpdates backend - LIVE DEPLOYMENT!", 
     timestamp: new Date().toISOString(),
-    version: "1.0.0",
-    status: "running"
+    version: "1.0.1",
+    status: "deployed successfully"
   });
 });
 

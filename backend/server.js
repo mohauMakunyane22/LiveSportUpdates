@@ -18,7 +18,11 @@ app.get("*", (req, res) => {
 
 // Example API route
 app.get("/api/hello", (req, res) => {
-  res.json({ msg: "Hello from backend" });
+  res.json({ 
+    msg: "Hello from LiveSportUpdates backend - deployed via GitHub Actions!", 
+    timestamp: new Date().toISOString(),
+    version: "1.0.0"
+  });
 });
 
 app.listen(PORT, () => {

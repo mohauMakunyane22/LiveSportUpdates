@@ -1,27 +1,60 @@
 ---
 title: Testing and Linting
-description: A guide on how testing and linting is performed in the application
+description: A guide on how testing and linting is performed in the application.
 ---
 
-This project currently uses basic testing and code formatting tools. Additional automated tests will be added during development.
+This project follows a code quality standard that includes linting and manual testing. Automated testing and CI enforcement are planned for future sprints.
+
+---
 
 ## Linting
 
-Both the frontend and backend use ESLint, although they have seperate configuration files to allow us to tailor the rules that we want enforce separability. To run this with a standard React config. Run:
+Linting is enforced across both the frontend and backend to maintain code consistency and catch common issues early.
+
+- **Tool Used**: [ESLint](https://eslint.org/)
+- **Configuration**: Separate ESLint config files are used for the frontend and backend to accommodate context-specific rules and frameworks.
+
+### Running the Linter
+
+To run the linter on the frontend, use:
 
 ```bash
 npm run lint
 ```
 
+Additional linting configurations and scripts for the backend may be included in later sprints or located in their respective folders.
+
+---
+
 ## Testing
 
-Automated testing will be added in later sprints, potentially using:
+Automated testing is planned for future development stages. The following tools are being considered:
 
-    Jest (unit tests for frontend components) or
+| Tool                  | Purpose                                                             |
+| --------------------- | ------------------------------------------------------------------- |
+| **Jest**              | Unit testing for React components and frontend logic.               |
+| **Firebase Test SDK** | Testing Firebase Cloud Functions and backend behavior in isolation. |
 
-    Firebase Test SDK (for backend function testing)
+Currently, testing is performed manually for each feature during development and before merging pull requests.
 
-Notes
-All new features should be tested manually before merging
+---
 
-Future CI integration will enforce linting and tests on pull requests
+## CI and Future Integration
+
+In upcoming sprints, we plan to integrate continuous integration workflows that will:
+
+- Automatically run linting and tests on pull requests
+- Reject code that fails formatting or test cases
+- Improve reliability and maintainability of the codebase
+
+CI tooling under consideration includes GitHub Actions or Firebase Hosting pre-deploy hooks.
+
+---
+
+## Developer Guidelines
+
+- All new features must be manually tested before merge.
+- Linting errors must be resolved before committing.
+- Contributors are encouraged to write unit tests once testing infrastructure is in place.
+
+This ensures a stable, maintainable codebase as the application grows.

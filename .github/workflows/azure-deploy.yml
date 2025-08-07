@@ -36,10 +36,18 @@ jobs:
       - name: Prepare deployment package
         run: |
           mkdir -p deploy-package
+          # Copy package.json to root for Azure to recognize it
           cp package*.json deploy-package/
+          # Copy backend directory
           cp -r backend deploy-package/
+          # Copy built frontend as frontend-dist
           cp -r frontend/dist deploy-package/frontend-dist
+          # Create a simple startup script for Azure
+          echo "node backend/server.js" > deploy-package/startup.sh
+          chmod +x deploy-package/startup.sh
           ls -la deploy-package/
+          echo "Contents of deploy-package:"
+          find deploy-package -type f
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4

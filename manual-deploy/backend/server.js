@@ -6,15 +6,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || process.env.WEBSITES_PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Example API route - must come before static files
 app.get("/api/hello", (req, res) => {
   res.json({ 
-    msg: "Hello from LiveSportUpdates backend - LIVE DEPLOYMENT!", 
+    msg: "Hello from LiveSportUpdates backend - Deploy Test!", 
     timestamp: new Date().toISOString(),
-    version: "1.0.1",
-    status: "deployed successfully"
+    version: "1.0.0",
+    status: "running"
   });
 });
 

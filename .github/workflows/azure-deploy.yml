@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - deploy-setup  # Added your branch
+      - deploy-setup
   workflow_dispatch:
 
 jobs:
@@ -18,30 +18,34 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Install dependencies (root)
-        run: npm install
+      - name: Install root dependencies
+        run: npm ci
 
       - name: Install frontend dependencies
-        run: cd frontend && npm install
+        run: |
+          cd frontend
+          npm ci
 
       - name: Build frontend
-        run: cd frontend && npm run build
-
-      - name: Archive production artifacts
         run: |
-          tar -czf node-app.tar.gz \
-            package*.json \
-            backend/ \
-            frontend/dist/ \
-            --exclude=frontend/node_modules \
-            --exclude=frontend/src
+          cd frontend
+          npm run build
+
+      - name: Prepare deployment package
+        run: |
+          mkdir -p deploy-package
+          cp package*.json deploy-package/
+          cp -r backend deploy-package/
+          cp -r frontend/dist deploy-package/frontend-dist
+          ls -la deploy-package/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: node-app.tar.gz
+          path: deploy-package/
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,15 +59,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-
-      - name: Extract artifact
-        run: tar -xzf node-app.tar.gz
+          path: .
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'livesport-1754580022'  # Your actual app name
+          app-name: 'livesport-1754580022'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: .

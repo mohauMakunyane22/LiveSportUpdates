@@ -29,7 +29,7 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             { label: "Frontend ", slug: "guides/frontend" },
             { label: "Backend", slug: "guides/backend" },
-            { label: "Authentication", slug: "guides/authentication" },
+            // { label: "Authentication", slug: "guides/authentication" },
           ],
         },
         {
@@ -38,7 +38,19 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             { label: "Technology Stack", slug: "guides/stack" },
             { label: "Testing and Linting", slug: "guides/testing" },
-            { label: "API Documentation", slug: "guides/endpoints" },
+            //{ label: "API Documentation", slug: "guides/endpoints" },
+          ],
+        },
+        {
+          label: "Methodology",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Git methodology", slug: "guides/git" },
+            {
+              label: "Project management methodology",
+              slug: "guides/project",
+            },
+            //{ label: "API Documentation", slug: "guides/endpoints" },
           ],
         },
         {

@@ -45,17 +45,6 @@ This project is built using modern web technologies optimized for real-time resp
 
 ---
 
-## Development Methodology
-
-| Practice/Tool              | Rationale                                                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Agile**                  | Supports iterative development with short feedback cycles and continuous improvement. Allows flexibility as requirements evolve.   |
-| **Notion**                 | Used for sprint planning, task tracking, and team coordination. Enables transparent collaboration.                                 |
-| **Git with GitHub**        | Provides robust version control with a feature-branch workflow. Changes are reviewed and merged into `main` to maintain stability. |
-| **Incremental Deployment** | A minimal viable version of the site was deployed early to avoid integration issues later. Features were then added iteratively.   |
-
----
-
 ## Why This Stack
 
 The technology stack was chosen to meet the following core project requirements:

@@ -3,8 +3,6 @@ title: Getting Started
 description: Set up LiveSportUpdates locally in minutes.
 ---
 
-# Getting Started
-
 This guide will help you get the project up and running on your local machine.
 
 ---

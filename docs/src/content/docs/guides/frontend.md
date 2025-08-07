@@ -3,6 +3,8 @@ title: Frontend Setup
 description: Instructions for running and developing the frontend application.
 ---
 
+## Frontend Setup
+
 The frontend is built with React and Vite. It handles the user interface for displaying real-time sports updates.
 
 ## Setup Instructions

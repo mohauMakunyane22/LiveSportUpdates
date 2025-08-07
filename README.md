@@ -27,7 +27,13 @@ More details on dev setup coming soon!
 - Tshepo Mngomezulu
 - Kwezi Mudacumura
 - Lehlohonolo Tosa
--  Joshua Williams 
+-  Joshua Williams
+
+  # Documentation 
+
+  For the full documentation of the website visit:
+
+https://relaxed-blini-e8417d.netlify.app/
 
 ## 📅 Current Sprint
 

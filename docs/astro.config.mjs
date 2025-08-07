@@ -28,7 +28,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Frontend ", slug: "guides/frontend" },
-            { label: "Backend", slug: "guides/backend" },
+            // { label: "Backend", slug: "guides/backend" },
             // { label: "Authentication", slug: "guides/authentication" },
           ],
         },

@@ -19,9 +19,10 @@ app.get("*", (req, res) => {
 // Example API route
 app.get("/api/hello", (req, res) => {
   res.json({ 
-    msg: "Hello from LiveSportUpdates backend - deployed via GitHub Actions!", 
+    msg: "Hello from LiveSportUpdates backend - Deploy Test!", 
     timestamp: new Date().toISOString(),
-    version: "1.0.0"
+    version: "1.0.0",
+    status: "running"
   });
 });
 

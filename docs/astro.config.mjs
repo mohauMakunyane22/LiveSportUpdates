@@ -1,26 +1,51 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'Live Sport Stats Documentation',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/mohauMakunyane22/LiveSportUpdates' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-		}),
-	],
+  integrations: [
+    starlight({
+      title: "Live Sport Stats Documentation",
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/mohauMakunyane22/LiveSportUpdates",
+        },
+      ],
+      sidebar: [
+        {
+          label: "Introduction",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Getting Started", slug: "guides/started" },
+            { label: "Project set up", slug: "guides/installation" },
+          ],
+        },
+        {
+          label: "Usage Guides",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Frontend ", slug: "guides/frontend" },
+            { label: "Backend", slug: "guides/backend" },
+            { label: "Authentication", slug: "guides/authentication" },
+          ],
+        },
+        {
+          label: "Development",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Tech Stack", slug: "guides/stack" },
+            { label: "Testing and Linting", slug: "guides/testing" },
+            { label: "API Documentation", slug: "guides/endpoints" },
+          ],
+        },
+        {
+          label: "Reference",
+          autogenerate: { directory: "reference" },
+        },
+      ],
+    }),
+  ],
 });

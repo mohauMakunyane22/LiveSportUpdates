@@ -5,7 +5,6 @@ description: A modern web platform for tracking live sports feeds, scores, and s
 
 # ⚽ Sports Live Tracker
 
-[Optional Badge: Code Coverage]
 
 A modern web platform for tracking live sports feeds, scores, and stats. Built with **React**, **Node.js/Express**, and **Azure services** for real-time updates.
 
@@ -124,23 +123,17 @@ More details on dev setup coming soon!
 
 #  Team
 
+- Joshua Williams
 - Mohau Makunyane  
 - Bohlale Mabonga
 - Tshepo Mngomezulu
 - Kwezi Mudacumura
 - Lehlohonolo Tosa
--  Joshua Williams
+
 
   # Documentation 
 
   For the full documentation of the website visit:
 
-https://relaxed-blini-e8417d.netlify.app/
 
-## 📅 Current Sprint
-
-Sprint 1 – Initial Setup  
-- Repo initialized and structured  
-- Frontend scaffolding (React)  
-- Planning documentation  
-- Dummy data usage for early UI testing
+https://adorable-kleicha-8ace6b.netlify.app/

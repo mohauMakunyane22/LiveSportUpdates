@@ -43,7 +43,48 @@ A modern web platform for tracking live sports feeds, scores, and stats. Built w
 ### 1. Run Mock Server (No API Usage)
 ```bash
 npm start
+```
 
+## 👥 Team
+- Fullstack Dev
+- Testing & QA
+- DevOps & Deployment
+- Mentorship: University of the Witwatersrand – Software Design 2025
+
+---
+
+## 🧪 Testing & UAT
+- Manual and automated User Acceptance Testing (UAT)
+- CI/CD testing pipeline integrated with GitHub Actions
+- Code coverage tracked via Codecov
+
+---
+
+## 📋 Project Management Methodology
+- **Framework:** Agile (Scrum)  
+- **Sprint Length:** 2 weeks  
+- **Roles:** Product Owner (prioritizes backlog), Scrum Master (removes blockers), Development Team (implements & tests features)  
+- **Ceremonies:** Sprint Planning, Daily Standups, Sprint Review, Sprint Retrospective  
+- **Evidence:** Notion sprint board, GitHub PRs linked to tasks, Discord standup notes  
+- **Rationale:** Allows rapid feedback, adapts to changing requirements, ensures accountability  
+- **References:** [Scrum Guide 2020](https://www.scrumguides.org/scrum-guide.html)
+
+---
+
+## 📄 License
+- Academic project under Wits University’s Software Engineering module
+
+---
+
+## 🙌 Contributions
+- Pull requests and feedback welcome. Open an issue or fork the repo to contribute
+
+---
+
+## 📚 Resources
+- [React Documentation](https://reactjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Azure Web Apps](https://learn.microsoft.com/en-us/azure/app-service/)
 
 
 
